@@ -1,5 +1,5 @@
 {
-	"ImportPath": "http_request_logger",
+	"ImportPath": "github.com/chris/http_request_logger",
 	"GoVersion": "go1.7",
 	"GodepVersion": "v74",
 	"Deps": []
