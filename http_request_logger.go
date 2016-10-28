@@ -40,6 +40,11 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", handler)
-	log.Println("Listening on port 6000...")
-	http.ListenAndServe(":6000", nil)
+
+	port := "6000"
+	if os.Getenv("PORT") != "" {
+		port = os.Getenv("PORT")
+	}
+	log.Println("Listening on port", port, "...")
+	http.ListenAndServe(":"+port, nil)
 }
