@@ -27,6 +27,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		log.Println("  ", k, ":", r.Header[k])
 	}
 
+	log.Println("Cookies:")
+	log.Println(r.Cookies())
+
 	log.Println("Body:")
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
